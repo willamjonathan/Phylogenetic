@@ -49,7 +49,7 @@ def draw_tree():
 title_label = tk.Label(root, text="Phylogenetic Tree", font=("Arial", 24),bg = "#9A9A9A")
 title_label.pack(pady=20)  
 
-draw_button = tk.Button(root, text="Draw Tree", command=draw_tree)
+draw_button = tk.Button(root, text="Draw Tree", command=draw_tree, bg = "#9A9A9A")
 draw_button.pack(pady=20)
 
 frame = tk.Frame(root)
