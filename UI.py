@@ -1,7 +1,6 @@
 import tkinter as tk
 import subprocess
 
-
 def button1_click():
     try:
         subprocess.run(["python", "code/alignment_show.py"])
@@ -9,32 +8,37 @@ def button1_click():
     except Exception as e:
         label.config(text=f"Error: {str(e)}", fg="red")
 
-
-# print("ayam")
-# "rjahfsdjk"
-
-
 def button2_click():
-    label.config(text="On process", fg="green")
-
+    try:
+        subprocess.run(["python", "code/phylo.py"])
+        label.config(text="Phylogenetic Draw Script Executed", fg="green")
+    except Exception as e:
+        label.config(text=f"Error: {str(e)}", fg="red")
 
 def button3_click():
     label.config(text="On process", fg="green")
 
-
 def button4_click():
     label.config(text="On process", fg="green")
-
 
 root = tk.Tk()
 root.title("Phylogenetic Analysis on Primate")
 
-# Create a label for the title
+# Get the screen width and height
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
+# Calculate the x and y coordinates to center the window
+x = (screen_width - 400) // 2  # You can adjust the width of the window as needed
+y = (screen_height - 300) // 2  # You can adjust the height of the window as needed
+
+# Set the window position
+root.geometry(f"400x300+{x}+{y}")
+
 label_title = tk.Label(
-    root, text="Phylogenetic Analysis Toolkit", font=("Arial", 16, "bold")
+    root, text="Phylogenetic Analysis on Primate", font=("Arial", 16, "bold")
 )
 label_title.pack(pady=20)
-
 
 button1 = tk.Button(
     root,
@@ -64,12 +68,10 @@ button4 = tk.Button(
     root, text="Disease", command=button4_click, bg="purple", fg="white", width=25
 )
 
-
 button1.pack()
 button2.pack()
 button3.pack()
 button4.pack()
-
 
 label = tk.Label(root, text="", font=("Arial", 12))
 label.pack(pady=20)
