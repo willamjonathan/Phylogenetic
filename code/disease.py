@@ -37,8 +37,9 @@ def search_button_click(pattern,diseasename):
         for key,value in sequence_dict.items():
             if value == pattern:
                 result_text.insert(tk.END, key)
-        result_text.insert(tk.END, "\n\n")
-        result_text.insert(tk.END, "\tThere is a chance that the disease: \n" +"\t\t"+  diseasename +"\n \tis found in the following list: \n\n")
+        result_text.insert(tk.END, "\n")
+        result_text.insert(tk.END, "============================================================\n")
+        result_text.insert(tk.END, "\tThere is a chance that the disease: "+  diseasename +"\n \tis found in the following list: \n\n")
         for file_path, header in matched_sequences:
             if header == "NC_010299.1 Daubentonia madagascariensis mitochondrion, complete genome":
                 result_text.insert(tk.END,  f"{i}. Daubentonia madagascariensis mitochondrion\n")
