@@ -3,14 +3,14 @@ import subprocess
 
 def button1_click():
     try:
-        subprocess.run(["python", "code/alignment_show.py"])
+        subprocess.run(["python", "code/show_alignment.py"])
         label.config(text="Multiple Sequence Alignment Script Executed", fg="green")
     except Exception as e:
         label.config(text=f"Error: {str(e)}", fg="red")
 
 def button2_click():
     try:
-        subprocess.run(["python", "code/phylo.py"])
+        subprocess.run(["python", "code/phylogenetic_tree.py"])
         label.config(text="Phylogenetic Draw Script Executed", fg="green")
     except Exception as e:
         label.config(text=f"Error: {str(e)}", fg="red")
