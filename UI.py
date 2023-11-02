@@ -10,6 +10,10 @@ def button1_click():
         label.config(text=f"Error: {str(e)}", fg="red")
 
 
+# print("ayam")
+# "rjahfsdjk"
+
+
 def button2_click():
     label.config(text="On process", fg="green")
 
