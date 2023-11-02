@@ -54,6 +54,7 @@ fasta_files = [
 
 root = tk.Tk()
 root.title("Pattern Searching")
+root.configure(bg='#b5b5b5')
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 
@@ -62,15 +63,15 @@ y = (screen_height - 600) // 2
 
 root.geometry(f"800x600+{x}+{y}")
 
-title_label = tk.Label(root, text="Pattern Searching", font=("Arial", 24))
+title_label = tk.Label(root, text="Pattern Searching", font=("Arial", 24), bg = "#9A9A9A")
 title_label.pack(pady=20)  
 
-pattern_label = tk.Label(root, text="Enter Pattern:")
-pattern_label.pack()
-pattern_entry = tk.Entry(root)
-pattern_entry.pack()
+pattern_label = tk.Label(root, text="Enter Pattern:",bg = "#9A9A9A")
+pattern_label.pack(pady = 5)
+pattern_entry = tk.Entry(root, bg = "#9A9A9A")
+pattern_entry.pack(pady = 5)
 
-search_button = tk.Button(root, text="Search", command=search_button_click)
+search_button = tk.Button(root, text="Search", command=search_button_click, bg = "#9A9A9A")
 search_button.pack()
 
 result_text = tk.Text(root, height=20, width=60)

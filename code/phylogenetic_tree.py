@@ -19,6 +19,7 @@ rRNA_ps_tree.rooted = True
 
 root = tk.Tk()
 root.title("Phylogenetic Tree Viewer")
+root.configure(bg='#b5b5b5')
 
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -36,7 +37,7 @@ def draw_tree():
     ax = fig.add_subplot(111)
     
     Phylo.draw(rRNA_ps_tree, axes=ax, do_show=False)
-    ax.set_title("Phylogenetic Tree of 5 primates")
+    # ax.set_title("Phylogenetic Tree of 5 primates")
     ax.set_ylabel("Primates")
     ax.set_xlabel("Distance")
     
@@ -45,8 +46,11 @@ def draw_tree():
     canvas_widget.pack(side=tk.TOP, fill=tk.BOTH, expand=1)
     canvas.draw()
 
+title_label = tk.Label(root, text="Phylogenetic Tree", font=("Arial", 24),bg = "#9A9A9A")
+title_label.pack(pady=20)  
+
 draw_button = tk.Button(root, text="Draw Tree", command=draw_tree)
-draw_button.pack()
+draw_button.pack(pady=20)
 
 frame = tk.Frame(root)
 frame.pack()

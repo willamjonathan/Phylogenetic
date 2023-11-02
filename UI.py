@@ -23,10 +23,16 @@ def button3_click():
         label.config(text=f"Error: {str(e)}", fg="red")
 
 def button4_click():
-    label.config(text="On process", fg="green")
+    try:
+        subprocess.run(["python", "code/disease.py"])
+        label.config(text="Disease is run", fg="green")
+    except Exception as e:
+        label.config(text=f"Error: {str(e)}", fg="red")
+
 
 root = tk.Tk()
 root.title("Phylogenetic Analysis on Primate")
+root.configure(bg='#b5b5b5')
 
 # Get the screen width and height
 screen_width = root.winfo_screenwidth()
@@ -40,7 +46,7 @@ y = (screen_height - 300) // 2  # You can adjust the height of the window as nee
 root.geometry(f"400x300+{x}+{y}")
 
 label_title = tk.Label(
-    root, text="Phylogenetic Analysis on Primate", font=("Arial", 16, "bold")
+    root, text="Phylogenetic Analysis on Primate", font=("Arial", 16, "bold"),bg = "#9A9A9A"
 )
 label_title.pack(pady=20)
 
@@ -77,7 +83,7 @@ button2.pack()
 button3.pack()
 button4.pack()
 
-label = tk.Label(root, text="", font=("Arial", 12))
+label = tk.Label(root, text="", font=("Arial", 12),bg = "#B5B5B5",fg="white")
 label.pack(pady=20)
 
 root.mainloop()

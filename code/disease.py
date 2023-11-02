@@ -70,6 +70,7 @@ fasta_files = [
 
 root = tk.Tk()
 root.title("Disease")
+root.configure(bg='#b5b5b5')
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 
@@ -78,7 +79,7 @@ y = (screen_height - 600) // 2
 
 root.geometry(f"800x600+{x}+{y}")
 
-title_label = tk.Label(root, text="Pattern Searching", font=("Arial", 24))
+title_label = tk.Label(root, text="Disease", font=("Arial", 24),bg = "#9A9A9A")
 title_label.pack(pady=20)
 
 h = "ATC"
@@ -87,7 +88,7 @@ j = "ACC"
 k = "AAC"
 l = "AAA"
 
-button_frame = tk.Frame(root)
+button_frame = tk.Frame(root,bg = "#9A9A9A")
 button_frame.pack(side=tk.TOP, padx=20, pady=10)
 
 button_colors = ['#4CAF50', '#FFC107', '#2196F3', '#E91E63', '#9C27B0']
