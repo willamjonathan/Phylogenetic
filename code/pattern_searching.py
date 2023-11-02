@@ -22,10 +22,14 @@ def search_button_click():
     matched_sequences = search_pattern_in_fastas(fasta_files, pattern)
     result_text.delete(1.0, tk.END)  # Clear previous results
     if matched_sequences:
+        result_text.insert(tk.END,"Pattern searched:"+pattern)
+        result_text.insert(tk.END,"\n\n")
         result_text.insert(tk.END, "Files and headers of sequences containing the pattern:\n")
         for file_path, header in matched_sequences:
             result_text.insert(tk.END, f"{header}\n")
     else:
+        result_text.insert(tk.END,"Pattern: "+pattern)
+        result_text.insert(tk.END,"\n\n")
         result_text.insert(tk.END, "Pattern not found in any sequence.")
 
 # FASTA file paths
