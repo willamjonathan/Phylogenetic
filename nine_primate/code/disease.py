@@ -82,6 +82,14 @@ def search_button_click(pattern,diseasename):
                 result_text.insert(tk.END,  f"{i}. Callithrix aurita mitochondrion\n")
             if header == "NC_064205.1 Plecturocebus grovesi isolate RVR22 voucher INPA:7275 mitochondrion, complete genome":
                 result_text.insert(tk.END,  f"{i}. Plecturocebus grovesi isolate RVR22 voucher INPA:7275 mitochondrion\n")
+            if header == "NC_019582.1 Trachypithecus vetulus mitochondrion, complete genome":
+                result_text.insert(tk.END,  f"{i}. Trachypithecus vetulus mitochondrion\n")
+            if header == "HQ171089.1 Lepilemur jamesorum isolate VEV7.7 mitochondrion, complete genome":
+                result_text.insert(tk.END,  f"{i}. Lepilemur jamesorum isolate VEV7.7 mitochondrion\n")
+            if header == "NC_020667.1 Simias concolor mitochondrion, complete genome":
+                result_text.insert(tk.END,  f"{i}. Simias concolor mitochondrion\n")
+            if header == "NC_033884.1 Hoolock tianxing isolate NA1 mitochondrion, complete genome":
+                result_text.insert(tk.END,  f"{i}. Hoolock tianxing isolate NA1 mitochondrion\n")
             i  = i + 1
     else:
         result_text.insert(tk.END, "Mutated sequence:" )
@@ -110,7 +118,11 @@ fasta_files = [
     "nine_primate/code/seqs/sequence_ii.fasta",
     "nine_primate/code/seqs/sequence_agc.fasta",
     "nine_primate/code/seqs/sequence_ca.fasta",
-    "nine_primate/code/seqs/sequence_pg.fasta"
+    "nine_primate/code/seqs/sequence_pg.fasta",
+    "nine_primate/code/seqs/sequence_ht.fasta",
+    "nine_primate/code/seqs/sequence_sc.fasta",
+    "nine_primate/code/seqs/sequence_tv.fasta",
+    "nine_primate/code/seqs/sequence_lj.fasta"
 ]
 
 # root = tk.Tk()
