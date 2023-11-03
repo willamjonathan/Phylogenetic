@@ -4,14 +4,21 @@ import tkinter as tk
 from tkinter import messagebox
 
 sequence_dict = {
-    "ATC": "ATGCTCATCAATT", #ngetes doang 
-    "AGC": "AGG",
-    "ACC": "ABT",
-    "AAC": "ATG",
-    "AAA": "TTT"
+    # normal yang disearch
+    "AGATGA": "AGCTGA", 
+    "TGCGGA": "TGCAGA",
+    "ATCGCA": "ATGGCA",
+    "CCTGT": "CCAGT",
+    "GACCAA": "GATCAA"
+
+    # # (yang disearch penyakit)
+    # "AGCTGA": "AGATGA", 
+    # "TGCAGA": "TGCGGA",
+    # "ATGGCA": "ATCGCA",
+    # "CCAGT": "CCTGT",
+    # "GATCAA": "GACCAA"
 }
-# penyakit, normal
-# yang disearch yang normal
+# yang ke 1, key = normal, value = mutated
 
 # pattern searching
 def search_pattern_in_fastas(fasta_files, pattern):
@@ -83,11 +90,20 @@ root.geometry(f"800x600+{x}+{y}")
 title_label = tk.Label(root, text="Disease", font=("Arial", 24),bg = "#9A9A9A")
 title_label.pack(pady=20)
 
-h = "ATC"
-i = "AGC"
-j = "ACC"
-k = "AAC"
-l = "AAA"
+# normal yang disearch
+h = "AGATGA"
+i = "TGCGGA"
+j = "ATCGCA"
+k = "CCTGT"
+l = "GACCAA"
+
+# # penyakit yang disearch
+# h = "AGCTGA"
+# i = "TGCAGA"
+# j = "ATGGCA"
+# k = "CCAGT"
+# l = "GATCAA"
+
 
 button_frame = tk.Frame(root,bg = "#9A9A9A")
 button_frame.pack(side=tk.TOP, padx=20, pady=10)
@@ -96,23 +112,23 @@ button_colors = ['#4CAF50', '#FFC107', '#2196F3', '#E91E63', '#9C27B0']
 
 button_font = ('Arial', 14)  
 
-d1 = tk.Button(button_frame, text="Disease 1", command=lambda: search_button_click(sequence_dict[h], "disease1"), 
+d1 = tk.Button(button_frame, text="Disease 1", command=lambda: search_button_click(sequence_dict[h], "Sickle Cell Anemia"), 
                bg=button_colors[0], fg='white', font=button_font)
 d1.pack(side=tk.LEFT, padx=10, pady=10)
 
-d2 = tk.Button(button_frame, text="Disease 2", command=lambda: search_button_click(sequence_dict[i], "disease2"), 
+d2 = tk.Button(button_frame, text="Disease 2", command=lambda: search_button_click(sequence_dict[i], "Cystic Fibrosis"), 
                bg=button_colors[1], fg='white', font=button_font)
 d2.pack(side=tk.LEFT, padx=10, pady=10)
 
-d3 = tk.Button(button_frame, text="Disease 3", command=lambda: search_button_click(sequence_dict[j], "disease3"), 
+d3 = tk.Button(button_frame, text="Disease 3", command=lambda: search_button_click(sequence_dict[j], " Phenylketonuria (PKU)"), 
                bg=button_colors[2], fg='white', font=button_font)
 d3.pack(side=tk.LEFT, padx=10, pady=10)
 
-d4 = tk.Button(button_frame, text="Disease 4", command=lambda: search_button_click(sequence_dict[k], "disease4"), 
+d4 = tk.Button(button_frame, text="Disease 4", command=lambda: search_button_click(sequence_dict[k], "Hemophilia A"), 
                bg=button_colors[3], fg='white', font=button_font)
 d4.pack(side=tk.LEFT, padx=10, pady=10)
 
-d5 = tk.Button(button_frame, text="Disease 5", command=lambda: search_button_click(sequence_dict[l], "disease5"), 
+d5 = tk.Button(button_frame, text="Disease 5", command=lambda: search_button_click(sequence_dict[l], "Beta-Thalassemia"), 
                bg=button_colors[4], fg='white', font=button_font)
 d5.pack(side=tk.LEFT, padx=10, pady=10)
 
