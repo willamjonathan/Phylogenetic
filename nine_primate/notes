@@ -1,0 +1,30 @@
+# kalau yang disearch PENYAKIT
+# penyakit yang disearch
+h = "AGCTGA"
+i = "TGCAGA"
+j = "ATGGCA"
+k = "CCAGT"
+l = "GATCAA"
+
+sequence_dict = {
+    # normal, penyakit (yang disearch penyakit)
+    "AGCTGA": "AGATGA", #ngetes doang 
+    "TGCAGA": "TGCGGA",
+    "ATGGCA": "ATCGCA",
+    "CCAGT": "CCTGT",
+    "GATCAA": "GACCAA"
+}
+
+# KALO NORMAL SEQUENCE YANG DISEARCH
+
+    # "AGATGA": "AGCTGA", #ngetes doang 
+    # "TGCGGA": "TGCAGA",
+    # "ATCGCA": "ATGGCA",
+    # "CCTGT": "CCAGT",
+    # "GACCAA": "GATCAA"
+
+# h = "AGATGA"
+# i = "TGCGGA"
+# j = "ATCGCA"
+# k = "CCTGT"
+# l = "GACCAA"
