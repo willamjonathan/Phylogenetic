@@ -1,10 +1,10 @@
 from Bio import SeqIO
 # read fastanya
-Seq1 = SeqIO.read("code/seqs/sequence_pg.fasta", "fasta")
-Seq2 = SeqIO.read("code/seqs/sequence_ca.fasta", "fasta")
-Seq3 = SeqIO.read("code/seqs/sequence_agc.fasta", "fasta")
-Seq4 = SeqIO.read("code/seqs/sequence_ii.fasta", "fasta")
-Seq5 = SeqIO.read("code/seqs/sequence_dm.fasta", "fasta")
+Seq1 = SeqIO.read("five_primate/code/seqs/sequence_pg.fasta", "fasta")
+Seq2 = SeqIO.read("five_primate/code/seqs/sequence_ca.fasta", "fasta")
+Seq3 = SeqIO.read("five_primate/code/seqs/sequence_agc.fasta", "fasta")
+Seq4 = SeqIO.read("five_primate/code/seqs/sequence_ii.fasta", "fasta")
+Seq5 = SeqIO.read("five_primate/code/seqs/sequence_dm.fasta", "fasta")
 
 # giving ID
 Seq1.id = "Plecturocebus grovesi"

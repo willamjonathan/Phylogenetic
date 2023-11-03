@@ -10,7 +10,7 @@ import psutil
 import os
 
 # Read the multiple sequence alignment from file
-with open("code/align_ms5.clw", "r") as aln:
+with open("five_primate/code/align_ms5.clw", "r") as aln:
     alignment = AlignIO.read(aln, "clustal")
 
 calculator = DistanceCalculator("identity")

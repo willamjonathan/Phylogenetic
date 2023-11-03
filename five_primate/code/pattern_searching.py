@@ -45,11 +45,11 @@ def search_button_click():
 
 # FASTA file paths
 fasta_files = [
-    "code/seqs/sequence_dm.fasta",
-    "code/seqs/sequence_ii.fasta",
-    "code/seqs/sequence_agc.fasta",
-    "code/seqs/sequence_ca.fasta",
-    "code/seqs/sequence_pg.fasta"
+    "five_primate/code/seqs/sequence_dm.fasta",
+    "five_primate/code/seqs/sequence_ii.fasta",
+    "five_primate/code/seqs/sequence_agc.fasta",
+    "five_primate/code/seqs/sequence_ca.fasta",
+    "five_primate/code/seqs/sequence_pg.fasta"
 ]
 
 root = tk.Tk()

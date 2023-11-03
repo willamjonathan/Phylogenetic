@@ -3,28 +3,28 @@ import subprocess
 
 def button1_click():
     try:
-        subprocess.run(["python", "code/show_alignment.py"])
+        subprocess.run(["python", "five_primate/code/show_alignment.py"])
         label.config(text="Multiple Sequence Alignment is run", fg="green")
     except Exception as e:
         label.config(text=f"Error: {str(e)}", fg="red")
 
 def button2_click():
     try:
-        subprocess.run(["python", "code/phylogenetic_tree.py"])
+        subprocess.run(["python", "five_primate/code/phylogenetic_tree.py"])
         label.config(text="Phylogenetic Draw is run", fg="green")
     except Exception as e:
         label.config(text=f"Error: {str(e)}", fg="red")
 
 def button3_click():
     try:
-        subprocess.run(["python", "code/pattern_searching.py"])
+        subprocess.run(["python", "five_primate/code/pattern_searching.py"])
         label.config(text="Pattern Searching is run", fg="green")
     except Exception as e:
         label.config(text=f"Error: {str(e)}", fg="red")
 
 def button4_click():
     try:
-        subprocess.run(["python", "code/disease.py"])
+        subprocess.run(["python", "five_primate/code/disease.py"])
         label.config(text="Disease is run", fg="green")
     except Exception as e:
         label.config(text=f"Error: {str(e)}", fg="red")
