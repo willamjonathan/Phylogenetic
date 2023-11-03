@@ -46,7 +46,7 @@ y = (screen_height - 300) // 2  # You can adjust the height of the window as nee
 root.geometry(f"400x300+{x}+{y}")
 
 label_title = tk.Label(
-    root, text="Phylogenetic Analysis on Primate", font=("Arial", 16, "bold"),bg = "#9A9A9A"
+    root, text="Phylogenetic Analysis on Primate (9)", font=("Arial", 16, "bold"),bg = "#9A9A9A"
 )
 label_title.pack(pady=20)
 
