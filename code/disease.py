@@ -2,6 +2,8 @@ import re
 import os
 import tkinter as tk
 from tkinter import messagebox
+import time  # Import the time module
+import psutil
 
 sequence_dict = {
     # normal yang disearch
@@ -18,6 +20,17 @@ sequence_dict = {
     # "CCAGT": "CCTGT",
     # "GATCAA": "GACCAA"
 }
+
+root = tk.Tk()
+root.title("Disease")
+root.configure(bg='#b5b5b5')
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
+x = (screen_width - 800) // 2
+y = (screen_height - 600) // 2
+
+root.geometry(f"800x600+{x}+{y}")
 # yang ke 1, key = normal, value = mutated
 
 # pattern searching
@@ -34,7 +47,18 @@ def search_pattern_in_fastas(fasta_files, pattern):
                     pattern_found.append((fasta_file, header))
     return pattern_found
 
+# # time and memory
+
+# execution_time_label = tk.Label(root, text="", font=("Arial", 12), bg="#b5b5b5")
+# execution_time_label.pack()
+
+# memory_usage_label = tk.Label(root, text="", font=("Arial", 12), bg="#b5b5b5")
+# memory_usage_label.pack()
+
+
 def search_button_click(pattern,diseasename):
+    # start_time = time.time()
+
     matched_sequences = search_pattern_in_fastas(fasta_files, pattern)
     result_text.delete(1.0, tk.END)  # Clear previous results
     i = 1
@@ -66,6 +90,19 @@ def search_button_click(pattern,diseasename):
                 result_text.insert(tk.END, key)
         result_text.insert(tk.END, "\n\n")
         result_text.insert(tk.END, "Disease not found in any sequence.")
+    
+    # TIME and memory
+    # end_time = time.time()  # Get the end time
+    # execution_time = end_time - start_time  # Calculate execution time
+    
+    # # Get memory usage
+    # process = psutil.Process(os.getpid())
+    # memory_usage = process.memory_info().rss / (1024 ** 2)  # in MB
+    
+    # # Update labels with execution time and memory usage
+    # execution_time_label.config(text=f"Execution Time: {execution_time:.2f} seconds")
+    # memory_usage_label.config(text=f"Memory Usage: {memory_usage:.2f} MB")
+
 
 # FASTA file paths
 fasta_files = [
@@ -76,16 +113,16 @@ fasta_files = [
     "code/seqs/sequence_pg.fasta"
 ]
 
-root = tk.Tk()
-root.title("Disease")
-root.configure(bg='#b5b5b5')
-screen_width = root.winfo_screenwidth()
-screen_height = root.winfo_screenheight()
+# root = tk.Tk()
+# root.title("Disease")
+# root.configure(bg='#b5b5b5')
+# screen_width = root.winfo_screenwidth()
+# screen_height = root.winfo_screenheight()
 
-x = (screen_width - 800) // 2
-y = (screen_height - 600) // 2
+# x = (screen_width - 800) // 2
+# y = (screen_height - 600) // 2
 
-root.geometry(f"800x600+{x}+{y}")
+# root.geometry(f"800x600+{x}+{y}")
 
 title_label = tk.Label(root, text="Disease", font=("Arial", 24),bg = "#9A9A9A")
 title_label.pack(pady=20)

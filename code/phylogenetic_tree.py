@@ -5,6 +5,9 @@ from Bio import AlignIO
 import tkinter as tk
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+import time
+import psutil
+import os
 
 # Read the multiple sequence alignment from file
 with open("code/align_ms5.clw", "r") as aln:
@@ -29,9 +32,21 @@ y = (screen_height - 600) // 2
 
 root.geometry(f"800x600+{x}+{y}")
 
+# time and memory
+t_m = tk.Frame(root,bg = "#9A9A9A")
+t_m.pack(side=tk.TOP, pady=10)
+
+execution_time_label = tk.Label(t_m, text="", font=("Arial", 10), bg="#b5b5b5")
+execution_time_label.pack(side=tk.LEFT, padx=10, pady=10)
+
+memory_usage_label = tk.Label(t_m, text="", font=("Arial", 10), bg="#b5b5b5")
+memory_usage_label.pack(side=tk.LEFT, padx=10, pady=10)
+
 def draw_tree():
     for widget in frame.winfo_children():
         widget.destroy()
+    # START TIME
+    start_time = time.time()
 
     fig = Figure(figsize=(8, 6))
     ax = fig.add_subplot(111)
@@ -45,6 +60,15 @@ def draw_tree():
     canvas_widget = canvas.get_tk_widget()
     canvas_widget.pack(side=tk.TOP, fill=tk.BOTH, expand=1)
     canvas.draw()
+    # TIME AND MEMORY
+    end_time = time.time()  # Get the end time
+    execution_time = end_time - start_time  # Calculate execution time
+
+    process = psutil.Process(os.getpid())
+    memory_usage = process.memory_info().rss / (1024 ** 2)  # in MB
+
+    execution_time_label.config(text=f"Execution Time: {execution_time:.2f} seconds")
+    memory_usage_label.config(text=f"Memory Usage: {memory_usage:.2f} MB")
 
 title_label = tk.Label(root, text="Phylogenetic Tree", font=("Arial", 24),bg = "#9A9A9A")
 title_label.pack(pady=20)  
