@@ -3,28 +3,28 @@ import subprocess
 
 def button1_click():
     try:
-        subprocess.run(["python", "nine_primate/code/show_alignment.py"])
+        subprocess.run(["python", "ten_primate/code/show_alignment.py"])
         label.config(text="Multiple Sequence Alignment is run", fg="green")
     except Exception as e:
         label.config(text=f"Error: {str(e)}", fg="red")
 
 def button2_click():
     try:
-        subprocess.run(["python", "nine_primate/code/phylogenetic_tree.py"])
+        subprocess.run(["python", "ten_primate/code/phylogenetic_tree.py"])
         label.config(text="Phylogenetic Draw is run", fg="green")
     except Exception as e:
         label.config(text=f"Error: {str(e)}", fg="red")
 
 def button3_click():
     try:
-        subprocess.run(["python", "nine_primate/code/pattern_searching.py"])
+        subprocess.run(["python", "ten_primate/code/pattern_searching.py"])
         label.config(text="Pattern Searching is run", fg="green")
     except Exception as e:
         label.config(text=f"Error: {str(e)}", fg="red")
 
 def button4_click():
     try:
-        subprocess.run(["python", "nine_primate/code/disease.py"])
+        subprocess.run(["python", "ten_primate/code/disease.py"])
         label.config(text="Disease is run", fg="green")
     except Exception as e:
         label.config(text=f"Error: {str(e)}", fg="red")
@@ -46,7 +46,7 @@ y = (screen_height - 300) // 2  # You can adjust the height of the window as nee
 root.geometry(f"400x300+{x}+{y}")
 
 label_title = tk.Label(
-    root, text="Phylogenetic Analysis on Primate (9)", font=("Arial", 16, "bold"),bg = "#9A9A9A"
+    root, text="Phylogenetic Analysis on Primate (10)", font=("Arial", 16, "bold"),bg = "#9A9A9A"
 )
 label_title.pack(pady=20)
 

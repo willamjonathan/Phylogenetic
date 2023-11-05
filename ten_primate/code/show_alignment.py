@@ -2,7 +2,7 @@ from Bio import AlignIO
 import matplotlib.pyplot as plt
 import numpy as np
 
-clw_file = "nine_primate/code/align_ms9.clw"
+clw_file = "ten_primate/code/align_ms10.clw"
 alignment = AlignIO.read(clw_file, "clustal")
 
 step_size = 200  

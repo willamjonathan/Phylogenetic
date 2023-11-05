@@ -90,6 +90,8 @@ def search_button_click(pattern,diseasename):
                 result_text.insert(tk.END,  f"{i}. Simias concolor mitochondrion\n")
             if header == "NC_033884.1 Hoolock tianxing isolate NA1 mitochondrion, complete genome":
                 result_text.insert(tk.END,  f"{i}. Hoolock tianxing isolate NA1 mitochondrion\n")
+            if header =="NC_015485.1 Rhinopithecus avunculus mitochondrion, complete genome":
+                result_text.insert(tk.END,  f"{i}. Rhinopithecus avunculus mitochondrion\n")
             i  = i + 1
     else:
         result_text.insert(tk.END, "Mutated sequence:" )
@@ -114,15 +116,16 @@ def search_button_click(pattern,diseasename):
 
 # FASTA file paths
 fasta_files = [
-    "nine_primate/code/seqs/sequence_dm.fasta",
-    "nine_primate/code/seqs/sequence_ii.fasta",
-    "nine_primate/code/seqs/sequence_agc.fasta",
-    "nine_primate/code/seqs/sequence_ca.fasta",
-    "nine_primate/code/seqs/sequence_pg.fasta",
-    "nine_primate/code/seqs/sequence_ht.fasta",
-    "nine_primate/code/seqs/sequence_sc.fasta",
-    "nine_primate/code/seqs/sequence_tv.fasta",
-    "nine_primate/code/seqs/sequence_lj.fasta"
+    "ten_primate/code/seqs/sequence_dm.fasta",
+    "ten_primate/code/seqs/sequence_ii.fasta",
+    "ten_primate/code/seqs/sequence_agc.fasta",
+    "ten_primate/code/seqs/sequence_ca.fasta",
+    "ten_primate/code/seqs/sequence_pg.fasta",
+    "ten_primate/code/seqs/sequence_ht.fasta",
+    "ten_primate/code/seqs/sequence_sc.fasta",
+    "ten_primate/code/seqs/sequence_tv.fasta",
+    "ten_primate/code/seqs/sequence_lj.fasta",
+    "ten_primate/code/seqs/sequence_ra.fasta"
 ]
 
 # root = tk.Tk()

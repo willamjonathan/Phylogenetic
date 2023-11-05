@@ -10,11 +10,17 @@ def run_file1():
 
 def run_file2():
     try:
-        subprocess.run(['python', 'nine_primate/UI.py'])
+        subprocess.run(['python', 'ten_primate/UI.py'])
         output_label.config(text="File 2 executed successfully!")
     except FileNotFoundError:
         output_label.config(text="Error: file2.py not found!")
 
+def run_file3():
+    try:
+        subprocess.run(['python', 'fifteen_primate/UI.py'])
+        output_label.config(text="File 3 executed successfully!")
+    except FileNotFoundError:
+        output_label.config(text="Error: file3.py not found!")
 
 root = tk.Tk()
 root.title("Phylogenetic Analysis on Endangered Primates")
@@ -39,8 +45,11 @@ subtitle_label.pack(pady=5)
 button1 = tk.Button(root, text="5 Primate", command=run_file1, width=15, height=2,bg = "green", fg= "white")
 button1.pack(pady=10)
 
-button2 = tk.Button(root, text="9 Primate", command=run_file2, width=15, height=2, bg = "blue",fg = "white")
+button2 = tk.Button(root, text="10 Primate", command=run_file2, width=15, height=2, bg = "blue",fg = "white")
 button2.pack(pady=10)
+
+button3 = tk.Button(root, text="15 Primate", command=run_file3, width=15, height=2, bg = "red",fg = "white")
+button3.pack(pady=10)
 
 output_label = tk.Label(root, text="", fg="white", bg = "#9A9A9A")
 output_label.pack()

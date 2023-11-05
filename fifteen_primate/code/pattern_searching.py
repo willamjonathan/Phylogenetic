@@ -45,6 +45,18 @@ def search_button_click():
                 result_text.insert(tk.END,  f"{i}. Simias concolor mitochondrion\n")
             if header == "NC_033884.1 Hoolock tianxing isolate NA1 mitochondrion, complete genome":
                 result_text.insert(tk.END,  f"{i}. Hoolock tianxing isolate NA1 mitochondrion\n")
+            if header =="NC_015485.1 Rhinopithecus avunculus mitochondrion, complete genome":
+                result_text.insert(tk.END,  f"{i}.  Rhinopithecus avunculus mitochondrion\n")
+            if header == "NC_008219.1 Piliocolobus badius mitochondrion, complete genome":
+                result_text.insert(tk.END,  f"{i}.  Piliocolobus badius mitochondrion\n")
+            if header =="NC_026120.1 Macaca nigra mitochondrion, complete genome":
+                result_text.insert(tk.END,  f"{i}.  Macaca nigra mitochondrion\n")
+            if header == "NC_001646.1 Pongo pygmaeus mitochondrion, complete genome":
+                result_text.insert(tk.END,  f"{i}. Pongo pygmaeus mitochondrion\n")
+            if header == "NC_064192.1 Ateles marginatus isolate INPA667 mitochondrion, complete genome":
+                result_text.insert(tk.END,  f"{i}.  Ateles marginatus isolate INPA667 mitochondrion\n")
+            if header == "NC_059325.1 Lemur catta isolate mLemCat1 mitochondrion, complete genome":
+                result_text.insert(tk.END,  f"{i}. Lemur catta isolate mLemCat1 mitochondrion\n")
             i  = i + 1
     else:
         result_text.insert(tk.END,"Pattern: "+pattern)
@@ -53,15 +65,21 @@ def search_button_click():
 
 # FASTA file paths
 fasta_files = [
-    "nine_primate/code/seqs/sequence_dm.fasta",
-    "nine_primate/code/seqs/sequence_ii.fasta",
-    "nine_primate/code/seqs/sequence_agc.fasta",
-    "nine_primate/code/seqs/sequence_ca.fasta",
-    "nine_primate/code/seqs/sequence_pg.fasta",
-    "nine_primate/code/seqs/sequence_ht.fasta",
-    "nine_primate/code/seqs/sequence_sc.fasta",
-    "nine_primate/code/seqs/sequence_tv.fasta",
-    "nine_primate/code/seqs/sequence_lj.fasta"
+    "fifteen_primate/code/seqs/sequence_dm.fasta",
+    "fifteen_primate/code/seqs/sequence_ii.fasta",
+    "fifteen_primate/code/seqs/sequence_agc.fasta",
+    "fifteen_primate/code/seqs/sequence_ca.fasta",
+    "fifteen_primate/code/seqs/sequence_pg.fasta",
+    "fifteen_primate/code/seqs/sequence_ht.fasta",
+    "fifteen_primate/code/seqs/sequence_sc.fasta",
+    "fifteen_primate/code/seqs/sequence_tv.fasta",
+    "fifteen_primate/code/seqs/sequence_lj.fasta",
+    "fifteen_primate/code/seqs/sequence_ra.fasta", 
+    "fifteen_primate/code/seqs/sequence_pb.fasta", 
+    "fifteen_primate/code/seqs/sequence_mn.fasta", 
+    "fifteen_primate/code/seqs/sequence_pp.fasta", 
+    "fifteen_primate/code/seqs/sequence_am.fasta", 
+    "fifteen_primate/code/seqs/sequence_lc.fasta"
 ]
 
 root = tk.Tk()
