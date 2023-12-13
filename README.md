@@ -1,6 +1,5 @@
 # Conducting Evolutionary Analysis on Most Endangered Primate’s Species Through Phylogenetic Tree Study
 
-
 # Background
 Identifying and conserving the genetic diversity within primate species is essential for their long-term survival. Phylogenetic analysis can inform conservation strategies by highlighting the importance of preserving genetic diversity within populations and recognizing unique evolutionary lineages that should be protected.
 
@@ -11,14 +10,14 @@ A phylogenetic tree, often referred to as a phylogeny, is a graphical representa
 2. Jocelin Wilson / 2501963330
 3. William Jonathan Mulyadi / 2502045683
 
-
 # User Manual:
-Please run the mainpage.py file.
+1. Git clone this repository first and make sure you cd into the Phylogenetic folder before running it.
+2. Please run the mainpage.py file.
+3. A GUI should pop up displaying 3 buttons for 5, 10 and 15 primates
 
 # Project report link:
 Link :
 
 # References:
-The datasets were gathered from: https://www.ncbi.nlm.nih.gov/
-
-The MUSLCE alignment link: https://www.ebi.ac.uk/Tools/msa/muscle/
+The datasets were gathered from GenBank: https://www.ncbi.nlm.nih.gov/
+The MUSCLE alignment link: https://www.ebi.ac.uk/Tools/msa/muscle/
