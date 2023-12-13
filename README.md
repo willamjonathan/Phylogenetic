@@ -19,5 +19,6 @@ Please run the mainpage.py file.
 Link :
 
 # References:
-The datasets were gathered from: 
-The MUSLCE alignment link: 
+The datasets were gathered from: https://www.ncbi.nlm.nih.gov/
+
+The MUSLCE alignment link: https://www.ebi.ac.uk/Tools/msa/muscle/
