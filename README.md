@@ -12,7 +12,7 @@ A phylogenetic tree, often referred to as a phylogeny, is a graphical representa
 
 # User Manual:
 1. Git clone this repository first and make sure you cd into the Phylogenetic folder before running it.
-2. Please run the opening.py file.
+2. Please run the run_this.py file.
 3. A GUI should pop up then you can click anywhere to continue
 4. The next GUI will display 3 buttons for 5, 10 and 15 primates
 
