@@ -1,8 +1,11 @@
 import tkinter as tk
 from PIL import Image, ImageTk
 import subprocess
+# from mainpage import run_mainpage
 
 def open_next_page(event):
+    # root.destroy()
+    # run_mainpage()
     try:
        
         root.destroy()  # 
