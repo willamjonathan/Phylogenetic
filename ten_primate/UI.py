@@ -35,18 +35,17 @@ root.title("Phylogenetic Analysis on Primate")
 root.configure(bg='#b5b5b5')
 
 from PIL import Image, ImageTk 
-# Load the background image
-background_image = Image.open("bg4.png")  # Replace with the actual path to your image
+
+background_image = Image.open("bg/bg4.png")
 background_photo = ImageTk.PhotoImage(background_image)
 
-# Set the window size and position
+
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 x = (screen_width - background_image.width) // 2
 y = (screen_height - background_image.height) // 2
 root.geometry(f"{background_image.width}x{background_image.height}+{x}+{y}")
 
-# Set the background image
 background_label = tk.Label(root, image=background_photo)
 background_label.place(relwidth=1, relheight=1)
 
@@ -98,10 +97,6 @@ button4 = tk.Button(
 )
 button4.pack(side=tk.LEFT,padx=10)
 
-# button1.pack()
-# button2.pack()
-# button3.pack()
-# button4.pack()
 
 label = tk.Label(root, text="", font=("Arial", 12),bg = "#B5B5B5",fg="white")
 label.pack(side = tk.TOP, pady=5)

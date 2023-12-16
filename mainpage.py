@@ -26,11 +26,11 @@ root = tk.Tk()
 root.title("Phylogenetic Analysis on Endangered Primates")
 root.configure(bg='#b5b5b5')
 from PIL import Image, ImageTk 
-# Load the background image
-background_image = Image.open("bg2.png")  # Replace with the actual path to your image
+
+background_image = Image.open("bg/bg2.png")  
 background_photo = ImageTk.PhotoImage(background_image)
 
-# Set the window size and position
+
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 x = (screen_width - background_image.width) // 2
@@ -38,7 +38,7 @@ y = (screen_height - background_image.height) // 2
 root.geometry(f"{background_image.width}x{background_image.height}+{x}+{y}")
 
 
-# Set the background image
+
 background_label = tk.Label(root, image=background_photo)
 background_label.place(relwidth=1, relheight=1)
 
