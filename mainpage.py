@@ -25,31 +25,43 @@ def run_file3():
 root = tk.Tk()
 root.title("Phylogenetic Analysis on Endangered Primates")
 root.configure(bg='#b5b5b5')
+from PIL import Image, ImageTk 
+# Load the background image
+background_image = Image.open("bg2.png")  # Replace with the actual path to your image
+background_photo = ImageTk.PhotoImage(background_image)
 
-# Get the screen width and height
+# Set the window size and position
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
+x = (screen_width - background_image.width) // 2
+y = (screen_height - background_image.height) // 2
+root.geometry(f"{background_image.width}x{background_image.height}+{x}+{y}")
 
-x = (screen_width - 600) // 2  
-y = (screen_height - 300) // 2  
 
-# Set the window position
-root.geometry(f"600x300+{x}+{y}")
+# Set the background image
+background_label = tk.Label(root, image=background_photo)
+background_label.place(relwidth=1, relheight=1)
 
-title_label = tk.Label(root, text="Phylogenetic Analysis on Endangered Primates", font=("Arial", 16, "bold"),bg= "#9A9A9A")
-title_label.pack(pady=10)
+# title_label = tk.Label(root, text="Phylogenetic Analysis on Endangered Primates", font=("Arial", 16, "bold"),bg= None)
+# title_label.pack(pady=10)
 
-subtitle_label = tk.Label(root, text="William, Tiffany, Jocelin", font=("Arial", 12),bg= "#9A9A9A")
-subtitle_label.pack(pady=5)
+# subtitle_label = tk.Label(root, text="William, Tiffany, Jocelin", font=("Arial", 12),bg= "#9A9A9A")
+# subtitle_label.pack(pady=5)
+button_frame = tk.Frame(root,bg = "black")
+button_frame.pack(side=tk.TOP, pady=240)
 
-button1 = tk.Button(root, text="5 Primate", command=run_file1, width=15, height=2,bg = "green", fg= "white")
-button1.pack(pady=10)
+# d1 = tk.Button(button_frame, text="Disease 1", command=lambda: search_button_click(sequence_dict[h], "Sickle Cell Anemia"), 
+#                bg=button_colors[0], fg='white', font=button_font)
+# d1.pack(side=tk.LEFT, padx=10, pady=10)
 
-button2 = tk.Button(root, text="10 Primate", command=run_file2, width=15, height=2, bg = "blue",fg = "white")
-button2.pack(pady=10)
+button1 = tk.Button(button_frame, text="5 Primate", command=run_file1, width=30, height=50,bg = "gray", fg= "white")
+button1.pack(side=tk.LEFT,padx=10)
 
-button3 = tk.Button(root, text="15 Primate", command=run_file3, width=15, height=2, bg = "red",fg = "white")
-button3.pack(pady=10)
+button2 = tk.Button(button_frame, text="10 Primate", command=run_file2, width=30, height=50, bg = "gray",fg = "white")
+button2.pack(side=tk.LEFT,padx=10)
+
+button3 = tk.Button(button_frame, text="15 Primate", command=run_file3, width=30, height=50, bg = "gray",fg = "white")
+button3.pack(side=tk.LEFT, padx=10)
 
 output_label = tk.Label(root, text="", fg="white", bg = "#9A9A9A")
 output_label.pack()

@@ -34,56 +34,76 @@ root = tk.Tk()
 root.title("Phylogenetic Analysis on Primate")
 root.configure(bg='#b5b5b5')
 
-# Get the screen width and height
+from PIL import Image, ImageTk 
+# Load the background image
+background_image = Image.open("bg5.png")  # Replace with the actual path to your image
+background_photo = ImageTk.PhotoImage(background_image)
+
+# Set the window size and position
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
+x = (screen_width - background_image.width) // 2
+y = (screen_height - background_image.height) // 2
+root.geometry(f"{background_image.width}x{background_image.height}+{x}+{y}")
 
-# Calculate the x and y coordinates to center the window
-x = (screen_width - 400) // 2  # You can adjust the width of the window as needed
-y = (screen_height - 300) // 2  # You can adjust the height of the window as needed
+# Set the background image
+background_label = tk.Label(root, image=background_photo)
+background_label.place(relwidth=1, relheight=1)
 
-# Set the window position
-root.geometry(f"400x300+{x}+{y}")
+# label_title = tk.Label(
+#     root, text="Phylogenetic Analysis on Primate (15)", font=("Arial", 16, "bold"),bg = "#9A9A9A"
+# )
+# label_title.pack(pady=20
+button_frame = tk.Frame(root,bg = "black")
+button_frame.pack(side=tk.BOTTOM, pady=120)
 
-label_title = tk.Label(
-    root, text="Phylogenetic Analysis on Primate (15)", font=("Arial", 16, "bold"),bg = "#9A9A9A"
-)
-label_title.pack(pady=20)
+button_frame2 = tk.Frame(button_frame,bg = "black")
+button_frame2.pack(side=tk.BOTTOM, pady=10)
+
 
 button1 = tk.Button(
-    root,
+    button_frame,
     text="Multiple Sequence Alignment",
     command=button1_click,
-    bg="red",
+    bg="gray",
     fg="white",
-    width=25,
+    width=30,
+    height=4
 )
+button1.pack(side=tk.LEFT,padx=10)
+
 button2 = tk.Button(
-    root,
+    button_frame,
     text="Phylogenetic Draw",
     command=button2_click,
-    bg="green",
+    bg="gray",
     fg="white",
-    width=25,
+    width=30,
+    height=4
 )
+button2.pack(side=tk.LEFT,padx=10)
 button3 = tk.Button(
-    root,
+    button_frame2,
     text="Pattern Searching",
     command=button3_click,
-    bg="blue",
+    bg="gray",
     fg="white",
-    width=25,
+    width=30,
+    height=4
 )
+button3.pack(side=tk.LEFT,padx=10)
 button4 = tk.Button(
-    root, text="Disease", command=button4_click, bg="purple", fg="white", width=25
+    button_frame2, text="Disease", command=button4_click, bg="gray", fg="white",  width=30,
+    height=4
 )
+button4.pack(side=tk.LEFT,padx=10)
 
-button1.pack()
-button2.pack()
-button3.pack()
-button4.pack()
+# button1.pack()
+# button2.pack()
+# button3.pack()
+# button4.pack()
 
 label = tk.Label(root, text="", font=("Arial", 12),bg = "#B5B5B5",fg="white")
-label.pack(pady=20)
+label.pack(side = tk.TOP, pady=5)
 
 root.mainloop()
