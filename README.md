@@ -19,6 +19,6 @@ Class: L5AC
 
 ## External Links:
 1. [Dataset Source](https://www.ncbi.nlm.nih.gov/)
-2. [MUSCLE] (https://www.ebi.ac.uk/Tools/msa/muscle/)
+2. [MUSCLE](https://www.ebi.ac.uk/Tools/msa/muscle/)
 4. [Final Project Report]()
 5. [Presentation]()
