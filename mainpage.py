@@ -27,7 +27,7 @@ root.title("Phylogenetic Analysis on Endangered Primates")
 root.configure(bg='#b5b5b5')
 from PIL import Image, ImageTk 
 
-background_image = Image.open("bg/bg2.png")  
+background_image = Image.open("bg/bg_fix.png")  
 background_photo = ImageTk.PhotoImage(background_image)
 
 
